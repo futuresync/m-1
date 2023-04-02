@@ -1,0 +1,35 @@
+<style>
+div{
+    width: 200px;
+    height: 200px;
+}
+
+</style>
+<div id="container"></div>
+<script>
+    getRandomColor();
+// função para gerar cor aleatória em HEX
+function getRandomColor() {
+  // gera um valor aleatório em hexadecimal com 6 dígitos
+  const hexDigits = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += hexDigits[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// cria três divs com cores aleatórias
+const container = document.getElementById("container");
+for (let i = 0; i < 3; i++) {
+  const div = document.createElement("div");
+  const color = getRandomColor();
+  div.style.backgroundColor = color;
+  const p = document.createElement("p");
+  p.textContent = color;
+  div.appendChild(p);
+  container.appendChild(div);
+}
+
+
+</script>

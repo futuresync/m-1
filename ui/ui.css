@@ -129,7 +129,7 @@ chat ai UI
     transition: background 0.5s ease-out;
 }
 #ai a:hover {
-    color: #ccc;
+    color: var(--color3);
     background-color: var(--color4);
 }
 #ai ul {

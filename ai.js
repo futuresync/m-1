@@ -4,7 +4,7 @@ var version = "v0.5";
 Hello();
 function Hello() {
     $("#ai").html(
-        `<p>Hello! Sou uma assistente virtual. Digite no campo abaixo, vou ajudar você.</p> 
+        `<p>Olá sou SP-AI. Com algumas perguntas, posso ajudar você.</p> 
         </p><hr><p> 
         <p><small>Você também pode escolher essas opções:</small><ul>
         <li><a onclick='Dolar()'>Ver a cotação do Dólar</a></li>
@@ -13,11 +13,15 @@ function Hello() {
     $("#input").blur();
 }
 
-var instagram = `<p>
-                Estou em treinamento sobre uma enorme quantidade de dados, que me permitem entender uma variedade de coisas sobre Franca/SP e as cidades da Alta Mogiana. No entanto, estou em aprendizado, ainda tenho limitações e estou em constante evolução. Espero continuar a melhorar minhas habilidades à medida que recebo mais dados e informações.</p>
+var instagram = `<p> Desculpe, mas não sei nada sobre isso.
+                Estou em treinamento sobre uma enorme quantidade de dados, 
+                que me permitem entender uma variedade de coisas sobre SP.
+                No entanto, estou em aprendizado e tenho limitações, mas estou 
+                em constante evolução.
+                </p>
                 <hr><p>
                 Me segue no Instagram?<br><br>
-                <a href='https://instagram.com/hellozoe.com.br'>
+                <a href='https://instagram.com/spai-1'>
                 Acessar meu instagram</a>
                 </p>`;
 
@@ -33,10 +37,10 @@ function Dolar() {
             $(".view-code").html(code);
             $("#ai").html(
                 "<p>O valor de $1 Dólar Americano é: <br><mark>" +
-                    high +
-                    "</mark><br><small>" +
-                    create_date +
-                    "</small></p>"
+                high +
+                "</mark><br><small>" +
+                create_date +
+                "</small></p>"
             );
             $(".view-date").html(create_date);
         }
@@ -52,9 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
             let input = inputField.value;
             input = input.replace(/[<>]/g, "");
             var keyword = input
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "");
-            
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
             function UserHistory() {
                 MotionMessage();
                 document.getElementById("key").innerText = input;
@@ -83,28 +87,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 let found = false;
 
                 // 
-                fetch("1.json")
+                fetch("natural-language/hello.json")
                     .then((response) => response.json())
                     .then((data) => {
-                    data.forEach((item) => {
-                        if (keyword.match(new RegExp(`\\b${item.key}\\b`, "gi"))) {
-                            $("#ai").html("<p>" + `${item.content}` + "</p>");
-                            found = true;
-                        }
-                    });
-                }) .catch((error) => console.error(error));
+                        data.forEach((item) => {
+                            if (keyword.match(new RegExp(`\\b${item.key}\\b`, "gi"))) {
+                                $("#ai").html("<p>" + `${item.content}` + "</p>");
+                                found = true;
+                            }
+                        });
+                    }).catch((error) => console.error(error));
 
                 // 
-                fetch("2.json")
+                fetch("natural-language/memes.json")
                     .then((response) => response.json())
                     .then((data) => {
-                    data.forEach((item) => {
-                        if (keyword.match(new RegExp(`\\b${item.key}\\b`, "gi"))) {
-                            $("#ai").html("<p>" + `${item.content}` + "</p>");
-                            found = true;
-                        }
-                    });
-                }) .catch((error) => console.error(error));
+                        data.forEach((item) => {
+                            if (keyword.match(new RegExp(`\\b${item.key}\\b`, "gi"))) {
+                                $("#ai").html("<p>" + `${item.content}` + "</p>");
+                                found = true;
+                            }
+                        });
+                    }).catch((error) => console.error(error));
 
                 // error
                 if (!found) {
