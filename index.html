@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- default tags -->
+    <title>SP-AI 1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#F59E78" />
+
+    <!-- meta tags-->
+    <!-- facebook tags -->
+    <!-- twitter tags -->
+
+    <!-- zoe -->
+    <link rel="stylesheet" href="ui/designsystem.css" />
+    <link rel="stylesheet" href="ui/interface.css" />
+
+    <!-- cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.12/carousel/carousel.umd.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.12/carousel/carousel.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.12/fancybox/fancybox.umd.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.12/fancybox/fancybox.min.css" />
+</head>
+
+<body>
+    <div class="load">
+        <div class="clear-loader"></div>
+        <div class="loader"></div>
+    </div>
+    <div class="adsDesktop"></div>
+    <div class="chatUI">
+        <img src="ui/zoe.png" id="logo" />
+        <div class="clear10x"></div>
+        <div class="aiUI">
+            <div id="zoe"></div>
+            <div class="clearChatUI"></div>
+        </div>
+    </div>
+    <div class="userUI">
+        <small>sua última pergunta</small>
+        <div id="key"></div>
+    </div>
+    <input type="text" id="input" placeholder="O que posso ajudar?" />
+
+    <!-- scripts -->
+    <script src="ui/chat.js"></script>
+    <script src=zoe.js></script>
+    <script src="ai.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+/* .....................................
+
+chat UI
+
+..................................... */
+html,
+body {
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+.chatUI {
+    width: 622px;
+}
+.chatUI #logo {
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 90px;
+}
+.chatUI img {
+    width: 100%;
+}
+.clearChatUI {
+    height: 650px;
+}
+.adsDesktop {
+    position: fixed;
+    left: 622px;
+    width: 100%;
+    height: 100vh;
+    background-color: #ddd;
+}
+
+@media (orientation: portrait) {
+    .chatUI {
+        width: 100% !important;
+    }
+    .clearChatUI {
+        height: 250px;
+    }
+    .adsDesktop {
+        display: none;
+    }
+}
+
+/* .....................................
+
+chat user UI
+
+..................................... */
+.userUI {
+    width: 622px;
+    position: fixed;
+    bottom: 62px;
+    height: 80px;
+    background-color: #eee;
+    padding-top: 20px;
+}
+.userUI small {
+    font-family: "Nunito", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    color: #444;
+}
+#key {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: var(--color3);
+    padding-left: 20px;
+}
+@media (orientation: portrait) {
+    .userUI {
+        width: 100%;
+    }
+}
+
+/* .....................................
+
+chat ai UI
+
+..................................... */
+.aiUI small {
+    font-family: "Nunito", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color4);
+    font-weight: 500;
+}
+.aiUI hr {
+    border-bottom: 0;
+    border-top: 1px dotted var(--color4);
+    background: transparent;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+#ai {
+    font-family: "Nunito", sans-serif;
+    color: var(--color1);
+    font-size: 1rem;
+    font-weight: 400;
+}
+#ai p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#ai a {
+    color: aliceblue;
+    font-size: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--color3);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out;
+
+    -webkit-transition: background 0.5s ease-out;
+    -moz-transition: background 0.5s ease-out;
+    -o-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out;
+}
+#ai a:hover {
+    color: #ccc;
+    background-color: var(--color4);
+}
+#ai ul {
+    margin-block-start: 0;
+    padding-inline-start: 30px;
+}
+#ai ul li {
+    margin-top: 30px;
+    list-style-type: none !important;
+    left: -50px;
+}
+
+/* .....................................
+
+chat input
+
+..................................... */
+#input {
+    background-color: var(--color3);
+    position: fixed;
+    bottom: 0;
+    width: 600px;
+    height: 80px;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    padding-left: 20px;
+    border: 0;
+}
+#input:focus {
+    color: var(--color1);
+    background-color: #eee;
+    outline: none !important;
+    box-shadow: 0 0 80px var(--color4);
+}
+#input:focus::placeholder {
+    color: #444;
+}
+
+::placeholder {
+    color: var(--color2);
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: var(--color2);
+}
+::-ms-input-placeholder {
+    color: var(--color2);
+}
+
+@media (orientation: portrait) {
+    #input {
+        width: 100%;
+    }
+}
