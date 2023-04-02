@@ -87,7 +87,7 @@ chat ai UI
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color4);
+    color: var(--color3);
     font-weight: 500;
 }
 .aiUI hr {
@@ -159,25 +159,14 @@ chat input
     border: 0;
 }
 #input:focus {
-    color: var(--color1);
-    background-color: #eee;
+    color: var(--color2);
     outline: none !important;
     box-shadow: 0 0 80px var(--color4);
 }
-#input:focus::placeholder {
-    color: #444;
-}
-
-::placeholder {
-    color: var(--color2);
-    opacity: 1;
-}
-:-ms-input-placeholder {
-    color: var(--color2);
-}
-::-ms-input-placeholder {
-    color: var(--color2);
-}
+#input:focus::placeholder { color: #4e576d; }
+::placeholder { color: #ddd; opacity: 1; }
+:-ms-input-placeholder { color: var(--color2); }
+::-ms-input-placeholder { color: var(--color2); }
 
 @media (orientation: portrait) {
     #input {
