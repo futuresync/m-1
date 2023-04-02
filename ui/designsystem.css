@@ -8,9 +8,9 @@ body{
 /* Colors */
 :root {
     --color1: #000000; 
-    --color2: #ffffff; 
-    --color3: #4B0082; 
-    --color4: #8A2BE2; 
+    --color2: #ffffff;
+    --color3: #3C4354; 
+    --color4: #D1E300;
 }
 ::selection {      background: cyan; }
 ::-moz-selection { background: cyan; }
