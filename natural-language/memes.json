@@ -1,10 +1,10 @@
 [
     {
         "key": "restaurantes japoneses no itaim",
-        "content": "bom com lanche<br>oi"
+        "content": "<p>bom com lanche<br>oi</p>"
     },
     {
-        "key": "batata",
-        "content": "<p>Me segue no Instagram?<br><br><a href='https: //instagram.com/spai-1'>Acessar meu instagram</a></p>"
+        "key": "instagram",
+        "content": "<p>Sim, eu tenho! Me segue no Instagram?<br><br><a href='https://instagram.com/spai-1' target='_blank'>Acessar meu instagram</a></p>"
     }
 ]

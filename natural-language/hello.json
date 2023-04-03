@@ -1,4 +1,10 @@
-[  
-    {    "key": "Joao",    "content": 25 },  
-    {    "key": "Maria",    "content": 22 }
+[
+    {
+        "key": "oi",
+        "content": "<p>Eai! tudo bem por aqui.</p>"
+    },
+    {
+        "key": "ola",
+        "content": "<p>Oi!</p>"
+    }
 ]
