@@ -1,10 +1,14 @@
-var version = "v0.5";
+var version = "v0.6";
 
 // Start conversation
 Hello();
 async function Hello() {
     document.getElementById("ai").innerHTML =
-        `<p>Olá sou SP-AI. Com algumas perguntas, posso ajudar você.</p> 
+        `<p>
+        Olá, eu sou M-1, um assistente virtual especializado em Marketing e Vendas. 
+        Estou aqui para ajudá-lo a entender melhor esses conceitos e fornecer insights 
+        para ajudá-lo a alcançar seus objetivos comerciais.
+        </p> 
         </p><hr><p> 
         <p><small>Você também pode escolher essas opções:</small>
         <ul>
@@ -21,7 +25,7 @@ function Dolar() {
         function (data) {
             var high = `R$${data.USDBRL.high}<br>`;
             var create_date = `Atualizado em: ${data.USDBRL.create_date}<br>`;
-            
+
             document.getElementById("ai").innerHTML =
                 "<p>O valor de $1 Dólar Americano é: <br><mark>" +
                 high +
@@ -111,3 +115,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+function AjaxLog() {
+    var xhr = new XMLHttpRequest();
+    var form_data = new FormData();
+
+    form_data.append('input', document.getElementById('input').value);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText);
+        }
+    };
+
+    xhr.open('POST', 'ai/spy-log.php', true);
+    xhr.send(form_data);
+}
